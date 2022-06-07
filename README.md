@@ -45,9 +45,9 @@ Install a nginx server :
   
 - Change nginx version to `1.22.0` in demo application manifest
 
-## Applications - Mircolearning project
+## Applications - Bookinfo project
 
-- `cp -r main/applications/microlearning demo/applications`
+- `cp -r main/applications/bookinfo demo/applications`
 - cp main/argo/apps.yaml demo/argo
 - cp -r main/argo/apps demo/argo
 
