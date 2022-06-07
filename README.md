@@ -39,6 +39,8 @@ Install a nginx server :
 
 - `cp main/argo/nginx-app.yaml demo/argo/nginx-app.yaml`  
 
+- Create nginx-app argo application : `kubectl apply -f demo/argo/nginx-app.yaml`
+  
 ## Applications - Mircolearning project
 
 ## Third party services
