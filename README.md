@@ -48,9 +48,13 @@ Install a nginx server :
 ## Applications - Mircolearning project
 
 - `cp -r main/applications/microlearning demo/applications`
-- cp main/argo/apps.yaml demo/argo 
+- cp main/argo/apps.yaml demo/argo
 - cp -r main/argo/apps demo/argo
-  
+
+- push change to git
+
+- Create app of apps argo application : `kubectl apply -f demo/argo/apps.yaml`
+
 ## Third party services
 
 ## Infrastructure
