@@ -40,7 +40,11 @@ Install a nginx server :
 - `cp main/argo/nginx-app.yaml demo/argo/nginx-app.yaml`  
 
 - Create nginx-app argo application : `kubectl apply -f demo/argo/nginx-app.yaml`
+
+- Check out the application : `kubectl port-forward svc/nginx-service 8081:80 -n example`
   
+- Change nginx version to `1.22.0` in demo application manifest
+
 ## Applications - Mircolearning project
 
 ## Third party services
