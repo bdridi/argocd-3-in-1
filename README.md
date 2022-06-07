@@ -62,4 +62,9 @@ http://localhost:9080/productpage
 
 ## Third party services
 
+### Prometheus & Grafana
+
+`cp -r main/argo/third-party.yaml demo/argo`
+`cp -r main/third-party demo`
+
 ## Infrastructure
