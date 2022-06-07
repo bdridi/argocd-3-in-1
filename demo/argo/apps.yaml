@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: example-nginx
+  name: app-of-apps
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/bdridi/argocd-3-in-1.git
     targetRevision: HEAD
-    path: demo/applications/nginx
+    path: demo/argo/apps
     directory:
       recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: example
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true

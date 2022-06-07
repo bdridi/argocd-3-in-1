@@ -47,6 +47,10 @@ Install a nginx server :
 
 ## Applications - Mircolearning project
 
+- `cp -r main/applications/microlearning demo/applications`
+- cp main/argo/apps.yaml demo/argo 
+- cp -r main/argo/apps demo/argo
+  
 ## Third party services
 
 ## Infrastructure
