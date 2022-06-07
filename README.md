@@ -48,12 +48,17 @@ Install a nginx server :
 ## Applications - Bookinfo project
 
 - `cp -r main/applications/bookinfo demo/applications`
-- cp main/argo/apps.yaml demo/argo
-- cp -r main/argo/apps demo/argo
-
-- push change to git
+- `cp main/argo/apps.yaml demo/argo`
+- `cp -r main/argo/apps demo/argo`
 
 - Create app of apps argo application : `kubectl apply -f demo/argo/apps.yaml`
+
+Checkout the application : 
+`kubectl port-forward svc/productpage 9080:9080 -n bookinfo`
+
+http://localhost:9080/productpage
+
+- Delete deployment `review-v1`
 
 ## Third party services
 
