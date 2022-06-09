@@ -36,8 +36,21 @@ helm install crossplane --namespace crossplane-system crossplane-stable/crosspla
 
 * Generate a `crossplane-gcp-provider-key` using `gcloud` cli. 
 * Export credentials : `export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 crossplane-gcp-provider-key.json | tr -d "\n")`
-* Set the exported credentials in secret manifest. 
-* Create a the gcp provider secret : `main/infra/gcp-secret`.
+
+* Create a the gcp provider secret :
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: gcp-account-creds
+  namespace: crossplane-system
+type: Opaque
+data:
+  credentials: ${BASE64ENCODED_GCP_PROVIDER_CREDS}
+```
+
 * Activate billing on project
 
 - For futher information : https://crossplane.io/docs/v1.8/cloud-providers/gcp/gcp-provider.html 
