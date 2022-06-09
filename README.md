@@ -46,23 +46,17 @@ helm install crossplane --namespace crossplane-system crossplane-stable/crosspla
 
 Install a nginx server : 
 
-
-
-- `cp -r main/applications/nginx demo/applications`
-
-- `cp main/argo/nginx-app.yaml demo/argo/nginx-app.yaml`  
+- CI : `bash main/ci/ci-example.sh` 
 
 - Create nginx-app argo application : `kubectl apply -f demo/argo/nginx-app.yaml`
 
-- Check out the application : `kubectl port-forward svc/nginx-service 8081:80 -n example`
+- Check out the application : `kubectl port-forward svc/ngin 8081:80 -n example`
   
 - Change nginx version to `1.22.0` in demo application manifest
 
 ## Applications - Bookinfo project
 
-- `cp -r main/applications/bookinfo demo/applications`
-- `cp main/argo/apps.yaml demo/argo`
-- `cp -r main/argo/apps demo/argo`
+- CI : 
 
 - Create app of apps argo application : `kubectl apply -f demo/argo/apps.yaml`
 
