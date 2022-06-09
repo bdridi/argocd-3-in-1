@@ -81,7 +81,27 @@ http://localhost:9080/productpage
 
 ## Infrastructure
 
+### GCP configuration 
+
+https://crossplane.io/docs/v1.8/cloud-providers/gcp/gcp-provider.html 
+
+- Activate billing on project
+
+
+create a the gcp provider secret : `main/infra/gcp-secret`
+export credentials before creating secret : `export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 crossplane-gcp-provider-key.json | tr -d "\n")`
+
+
+
+### create resources 
 cp -R main/infra demo
 cp -R main/argo/infra.yaml demo/argo 
 
 kubectl apply -f demo/argo/infra.yaml
+
+
+
+Tools: 
+Kind
+kubectl
+crossplane-cli 
