@@ -1,5 +1,11 @@
-# ArgoCD three in one
-Manage continious delivery for applicatons, third party services and infrastructure with ArgoCD.
+# Gitops 3 in 1 with ArgoCD & Crossplane
+
+Manage continious delivery for applicatons, third party services and infrastructure with ArgoCD and Crossplane.
+
+## Project structure
+
+- `Main` directory : The directory that contains all our manifests used in the different steps.  
+- `Demo` directory : This directory is used to simulate the configuration repository. The CI is simulated to update this directory that being synched. 
 
 ## Setup
 
@@ -104,14 +110,10 @@ Install a nginx server :
 - Create argo application for third party services : `kubectl apply -f demo/argo/infra.yaml`
 
 - Commit and push
-- 
 
+### Tools
 
-kubectl apply -f demo/argo/infra.yaml
-
-
-
-Tools: 
-Kind
-kubectl
-crossplane-cli 
+- Kind
+- kubectl
+- crossplane-cli
+- gloud-cli
