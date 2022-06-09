@@ -10,7 +10,7 @@ create new kind cluster named `argocd-3-in-1`
 kind create cluster --name argocd-3-in-1
 ```
 
-### Install ArgoCD
+#### Install ArgoCD
 
 - install helm chart
 
@@ -29,6 +29,17 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
+
+###  Install crossplane
+
+```bash
+kubectl create namespace crossplane-system
+
+helm repo add crossplane-stable https://charts.crossplane.io/stable
+helm repo update
+
+helm install crossplane --namespace crossplane-system crossplane-stable/crossplane
 ```
 
 ## Example application - Nginx server
@@ -72,3 +83,5 @@ http://localhost:9080/productpage
 
 cp -R main/infra demo
 cp -R main/argo/infra.yaml demo/argo 
+
+kubectl apply -f demo/argo/infra.yaml
