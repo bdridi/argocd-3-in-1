@@ -44,11 +44,13 @@ helm install crossplane --namespace crossplane-system crossplane-stable/crosspla
 
 ## Step 1 - Example application - Nginx server
 
-Install a nginx server : 
+Install a nginx server :
 
-- CI : `bash main/ci/ci-example.sh` 
+- CI : `bash main/ci/ci-example.sh`
 
 - Create nginx-app argo application : `kubectl apply -f demo/argo/nginx-app.yaml`
+
+- Commit and push
 
 - Check out the application : `kubectl port-forward svc/ngin 8081:80 -n example`
   
@@ -60,7 +62,9 @@ Install a nginx server :
 
 - Create app of apps argo application : `kubectl apply -f demo/argo/apps.yaml`
 
-- Checkout the application : 
+- Commit and push
+
+- Checkout the application :
 
 - `kubectl port-forward svc/productpage 9080:9080 -n bookinfo`
 
@@ -76,16 +80,19 @@ Install a nginx server :
 
 - Create argo application for third party services : `kubectl apply -f demo/argo/third-party.yaml`
 
+- Commit and push
+
 ## Infrastructure
 
-### GCP configuration 
+### Create a SQLInstance database GCP resource
 
+- CI : `bash main/ci/ci-infra.sh`
 
+- Create argo application for third party services : `kubectl apply -f demo/argo/third-party.yaml`
 
+- Commit and push
+- 
 
-### create resources 
-cp -R main/infra demo
-cp -R main/argo/infra.yaml demo/argo 
 
 kubectl apply -f demo/argo/infra.yaml
 
