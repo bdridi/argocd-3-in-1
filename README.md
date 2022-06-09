@@ -71,3 +71,4 @@ http://localhost:9080/productpage
 ## Infrastructure
 
 cp -R main/infra demo
+cp -R main/argo/infra.yaml demo/argo 
