@@ -5,7 +5,7 @@ metadata:
 spec:
   forProvider:
     initialClusterVersion: latest
-    location: us-east-1
+    location: europe-north1
 ---
 apiVersion: container.gcp.crossplane.io/v1beta1
 kind: NodePool
@@ -28,4 +28,4 @@ spec:
       autoUpgrade: false
     initialNodeCount: 1
     locations:
-      - "us-east1-b"
+      - "europe-north1-a"
