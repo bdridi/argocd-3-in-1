@@ -88,7 +88,7 @@ Install a nginx server :
 
 - CI : `bash main/ci/ci-infra.sh`
 
-- Create argo application for third party services : `kubectl apply -f demo/argo/third-party.yaml`
+- Create argo application for third party services : `kubectl apply -f demo/argo/infra.yaml`
 
 - Commit and push
 - 
