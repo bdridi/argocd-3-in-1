@@ -10,7 +10,7 @@ spec:
       tier: db-custom-1-3840
       dataDiskSizeGb: 1
   providerConfigRef:
-    name: example
+    name: default
   writeConnectionSecretToRef:
     name: example-cloudsql-connection-details
     namespace: crossplane-system
