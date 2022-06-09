@@ -56,24 +56,25 @@ Install a nginx server :
 
 ## Applications - Bookinfo project
 
-- CI : 
+- CI : `bash main/ci/ci-bookinfo.sh`
 
 - Create app of apps argo application : `kubectl apply -f demo/argo/apps.yaml`
 
-Checkout the application : 
-`kubectl port-forward svc/productpage 9080:9080 -n bookinfo`
+- Checkout the application : 
 
-http://localhost:9080/productpage
+- `kubectl port-forward svc/productpage 9080:9080 -n bookinfo`
+
+- <http://localhost:9080/productpage>
 
 - Delete deployment `review-v1`
 
 ## Third party services
 
-### Prometheus & Grafana
+### Prometheus
 
-`cp -r main/argo/third-party.yaml demo/argo`
-`cp -r main/third-party demo`
+- CI : `bash main/ci/ci-bookinfo.sh`
 
+- Create argo application for third party services : `kubectl apply -f demo/argo/third-party.yaml`
 
 ## Infrastructure
 
