@@ -67,4 +67,7 @@ http://localhost:9080/productpage
 `cp -r main/argo/third-party.yaml demo/argo`
 `cp -r main/third-party demo`
 
+
 ## Infrastructure
+
+cp -R main/infra demo
