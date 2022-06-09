@@ -8,7 +8,7 @@ spec:
     region: us-west2
     settings:
       tier: db-custom-1-3840
-      dataDiskSizeGb: 1
+      dataDiskSizeGb: 10
   providerConfigRef:
     name: default
   writeConnectionSecretToRef:
