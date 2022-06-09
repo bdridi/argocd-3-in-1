@@ -1,0 +1,31 @@
+apiVersion: container.gcp.crossplane.io/v1beta2
+kind: Cluster
+metadata:
+  name: argocd-3-in-1
+spec:
+  forProvider:
+    initialClusterVersion: latest
+    location: us-east-1
+---
+apiVersion: container.gcp.crossplane.io/v1beta1
+kind: NodePool
+metadata:
+  name: argocd-3-in-1
+spec:
+  forProvider:
+    autoscaling:
+      enabled: true
+      maxNodeCount: 2
+      minNodeCount: 1  
+    clusterRef:
+      name: argocd-3-in-1
+    config:
+      oauthScopes:
+        - "https://www.googleapis.com/auth/cloud-platfeform"
+      machineType: e2‑micro
+      preemptible: true
+    management:
+      autoUpgrade: false
+    initialNodeCount: 1
+    locations:
+      - "us-east1-b"
