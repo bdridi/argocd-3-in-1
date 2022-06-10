@@ -2,6 +2,8 @@
 
 Manage continious delivery for applicatons, third party services and infrastructure with ArgoCD and Crossplane.
 
+![alt text](argo-crossplane.png "Argo-Crossplane")
+
 ## Project structure
 
 - `Main` directory : The directory that contains all our manifests used in the different steps.  
@@ -43,7 +45,7 @@ helm install crossplane --namespace crossplane-system crossplane-stable/crosspla
 * Generate a `crossplane-gcp-provider-key` using `gcloud` cli. 
 * Export credentials : `export BASE64ENCODED_GCP_PROVIDER_CREDS=$(base64 crossplane-gcp-provider-key.json | tr -d "\n")`
 
-* Create a the gcp provider secret :
+* Create a the gcp provider secret:
 
 ```yaml
 ---
