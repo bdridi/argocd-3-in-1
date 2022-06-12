@@ -204,7 +204,7 @@ kubectl apply -f demo/argo/third-party.yaml`
 
 - Check out the argo interface
 
-## Infrastructure
+## Step 4 - Infrastructure
 
 In this final step, let's assume that we have an SQL managed database is hosted in GCP cloud provider. 
 
@@ -223,7 +223,7 @@ kubectl apply -f demo/argo/infra.yaml`
 
 - Go the your GCP console and notice that the database is being created. 
 
-:warning: ***NB : Please remove the database manifest from `demo` directory in order to tell crossplane to delete the resource. Otherwise you risk to billed if you have don't have a free tier plan.***
+:warning: ***NB : Please remove the database manifest from `demo` directory in order to tell crossplane to delete the resource. Otherwise you risk to be billed if you have don't have a free tier plan.***
 
 ### Used tools
 
