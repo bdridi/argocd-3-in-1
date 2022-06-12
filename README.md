@@ -137,7 +137,7 @@ Let's start by installing a simple example application :
 - CI : add the application manifests to `demo` directory.  
 
 ```bash
-bash main/ci/ci-example.sh`
+bash main/ci/ci-example.sh
 ````
 
 - Create the argo application that will tracking `demo/applications/nginx`
@@ -150,7 +150,7 @@ kubectl apply -f demo/argo/nginx-app.yaml`
 - Check out the application
 
 ```bash
-kubectl port-forward svc/nginx 8081:80 -n example`
+kubectl port-forward svc/nginx 8081:80 -n example
 ```
   
 - Change nginx version to `1.22.0` in demo application manifest. Commit and push and see how the argo application will sychronize the nginx application. 
@@ -170,7 +170,7 @@ bash main/ci/ci-bookinfo.sh`
 
 
 ```bash
-kubectl apply -f demo/argo/apps.yaml`
+kubectl apply -f demo/argo/apps.yaml
 ````
 
 - Commit and push
@@ -192,7 +192,7 @@ In this step we add a third party sofware in our cluster which is `Prometeheus`
 - CI : add the application manifests to `demo` directory.  
 
 ```bash
-bash main/ci/ci-third-party.sh`
+bash main/ci/ci-third-party.sh
 ````
 
 - Create argo application for third party services
@@ -216,7 +216,7 @@ bash main/ci/ci-infra.sh
 
 - Create argo application for the infrastructure : 
 ```bash
-kubectl apply -f demo/argo/infra.yaml`
+kubectl apply -f demo/argo/infra.yaml
 ```
 
 - Commit and push
